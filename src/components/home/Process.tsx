@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const Process = () => {
   return (
-    <section className="py-24 bg-[#f4f6f8]">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Why XenTek */}
@@ -97,3 +97,4 @@ export const Process = () => {
     </section>
   );
 };
+

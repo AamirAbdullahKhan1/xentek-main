@@ -3,7 +3,7 @@ import { Triangle, Globe, Sparkles } from 'lucide-react';
 
 export const Evolution = () => {
   return (
-    <section className="py-24 bg-[#f4f6f8]">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20">
@@ -33,7 +33,7 @@ export const Evolution = () => {
               viewport={{ once: true }}
               className="flex flex-col md:flex-row gap-8 relative z-10"
             >
-              <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#f4f6f8] border-4 border-[#f4f6f8]">
+              <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white border-4 border-white">
                 <div className="w-3 h-3 rounded-full bg-teal-300" />
               </div>
               <div className="flex-1 md:pl-8">
@@ -59,7 +59,7 @@ export const Evolution = () => {
               transition={{ delay: 0.1 }}
               className="flex flex-col md:flex-row gap-8 relative z-10"
             >
-              <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#f4f6f8] border-4 border-[#f4f6f8]">
+              <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white border-4 border-white">
                 <div className="w-3 h-3 rounded-full bg-teal-500" />
               </div>
               <div className="flex-1 md:pl-8">
@@ -85,7 +85,7 @@ export const Evolution = () => {
               transition={{ delay: 0.2 }}
               className="flex flex-col md:flex-row gap-8 relative z-10"
             >
-              <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-[#f4f6f8] border-4 border-[#f4f6f8]">
+              <div className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white border-4 border-white">
                 <div className="w-3 h-3 rounded-full bg-xentek-dark" />
               </div>
               <div className="flex-1 md:pl-8">
@@ -110,3 +110,4 @@ export const Evolution = () => {
     </section>
   );
 };
+

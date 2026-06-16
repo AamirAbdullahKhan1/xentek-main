@@ -3,7 +3,7 @@ import { Database, TrendingUp, Globe, Layers } from 'lucide-react';
 
 export const Trust = () => {
   return (
-    <section className="py-24 bg-[#f4f6f8]">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-12">
@@ -101,3 +101,4 @@ export const Trust = () => {
     </section>
   );
 };
+

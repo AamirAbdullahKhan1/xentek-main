@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Hero = () => {
   return (
-    <section className="pt-24 pb-20 bg-[#f4f6f8] relative overflow-hidden">
+    <section className="pt-24 pb-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100/50 text-teal-800 text-sm font-semibold mb-6">
@@ -69,3 +69,4 @@ export const Hero = () => {
     </section>
   );
 };
+

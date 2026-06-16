@@ -17,7 +17,7 @@ export const Matrix = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#f4f6f8] rounded-3xl p-10 border border-gray-200 flex flex-col justify-between"
+            className="bg-white rounded-3xl p-10 border border-gray-200 flex flex-col justify-between"
           >
             <div>
                <div className="inline-block px-3 py-1 bg-teal-100 text-teal-800 text-xs font-bold tracking-wider rounded uppercase mb-6">RAPID DEPLOYMENT</div>
@@ -60,7 +60,7 @@ export const Matrix = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-[#f4f6f8] rounded-3xl p-10 border border-gray-200 flex flex-col justify-between"
+            className="bg-white rounded-3xl p-10 border border-gray-200 flex flex-col justify-between"
           >
             <div>
                <div className="inline-block px-3 py-1 bg-gray-200 text-gray-700 text-xs font-bold tracking-wider rounded uppercase mb-6">UI/UX AUDIT</div>
@@ -81,3 +81,4 @@ export const Matrix = () => {
     </section>
   );
 };
+

@@ -160,7 +160,7 @@ export const ServiceDetails = () => {
           </div>
 
           {/* Service 4: Custom Solutions */}
-          <div className="bg-[#f4f6f8] rounded-3xl p-12 border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
+          <div className="bg-white rounded-3xl p-12 border border-gray-100 flex flex-col md:flex-row gap-12 items-center">
              <div className="grid grid-cols-2 gap-4 flex-1">
                 <div className="bg-white p-6 rounded-2xl border border-gray-100 text-center shadow-sm">
                    <div className="w-8 h-8 mx-auto border-2 border-teal-200 rounded-full mb-3" />
@@ -201,3 +201,4 @@ export const ServiceDetails = () => {
     </section>
   );
 };
+

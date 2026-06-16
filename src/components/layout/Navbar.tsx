@@ -18,7 +18,7 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 rounded-b-3xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
@@ -33,7 +33,7 @@ export const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-base font-medium tracking-wider font-poppins transition-colors duration-200 hover:text-gray-600 relative ${
+                className={`text-base font-semibold tracking-wider font-nunitoSans transition-colors duration-200 hover:text-gray-600 relative ${
                   location.pathname === link.path ? 'text-gray-900' : 'text-gray-400'
                 }`}
               >
@@ -51,7 +51,7 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center">
             <Link
               to="/contact"
-              className="bg-xentek-dark text-white font-poppins px-6 py-2.5 rounded-full text-base font-bold tracking-wide hover:bg-gray-800 transition-colors duration-300"
+              className="bg-xentek-dark text-white font-poppins px-6 py-2.5 rounded-full text-base font-medium tracking-wide hover:bg-gray-800 transition-colors cursor-pointer duration-300"
             >
               Start a Project
             </Link>

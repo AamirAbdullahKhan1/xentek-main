@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import React from 'react';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 interface LayoutProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const Layout = ({ children }: LayoutProps) => {
@@ -17,7 +17,7 @@ export const Layout = ({ children }: LayoutProps) => {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#f4f6f8]">
+    <div className="flex flex-col min-h-screen bg-white">
       <Navbar />
       <main className="flex-grow">
         {children}
@@ -26,3 +26,4 @@ export const Layout = ({ children }: LayoutProps) => {
     </div>
   );
 };
+
