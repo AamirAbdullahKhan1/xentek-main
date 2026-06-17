@@ -9,8 +9,8 @@ export const Home = () => {
   return (
     <div className="w-full overflow-hidden">
       <Hero />
-      <Services />
       <Process />
+      <Services />
       <Work />
       <CommunityFaq />
       <Cta />

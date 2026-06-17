@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Hero = () => {
