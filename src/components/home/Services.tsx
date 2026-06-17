@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Globe, Layers, Smartphone, Bot, Target, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark, faCubes, faGears, faHeadset} from '@fortawesome/free-solid-svg-icons'; // or free-regular-svg-icons if preferred
 
 const services = [
   {
@@ -24,7 +26,7 @@ const services = [
     descClass: "text-gray-200",
     numClass: "text-white/40",
     bottomTag: "FULL-STACK",
-    bottomIcon: <Zap className="text-white w-4 h-4" />,
+    bottomIcon: <FontAwesomeIcon icon={faCubes} className="text-white w-6 h-6" />,
     iconBox: "bg-white/10",
   },
   {
@@ -37,7 +39,7 @@ const services = [
     descClass: "text-gray-700",
     numClass: "text-gray-400",
     bottomTag: "CROSS-PLATFORM",
-    bottomIcon: <Zap className="text-gray-600 w-4 h-4" />,
+    bottomIcon: <FontAwesomeIcon icon={faXmark} className="text-gray-600 w-4 h-4" />,
     iconBox: "bg-teal-50",
   },
   {
@@ -50,7 +52,7 @@ const services = [
     descClass: "text-gray-700",
     numClass: "text-gray-400",
     bottomTag: "AI & AUTOMATION",
-    bottomIcon: <Zap className="text-gray-600 w-4 h-4" />,
+    bottomIcon: <FontAwesomeIcon icon={faGears} className="text-gray-600 w-5 h-5" />,
     iconBox: "bg-teal-50",
   },
   {
@@ -63,16 +65,16 @@ const services = [
     descClass: "text-gray-700",
     numClass: "text-gray-400",
     bottomTag: "CONSULTING",
-    bottomIcon: <Zap className="text-gray-600 w-4 h-4" />,
+    bottomIcon: <FontAwesomeIcon icon={faHeadset} className="text-gray-600 w-5 h-5" />,
     iconBox: "bg-teal-50",
   }
 ];
 
 export const Services = () => {
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-20 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-10">
           <div className="max-w-2xl">
@@ -85,7 +87,7 @@ export const Services = () => {
               & Digital Elegance
             </h2>
           </div>
-          
+
           <div className="max-w-md lg:pl-8 lg:border-l-2 border-gray-200 lg:pb-2">
             <p className="text-gray-700 text-sm md:text-base leading-relaxed font-poppins">
               We specialize in turning complex requirements into high-performance digital tools, focusing on the intersection of technical precision and editorial-grade design.
@@ -102,7 +104,7 @@ export const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
-              className={`rounded-[2rem] border-2 border-gray-200 p-8 lg:p-10 flex flex-col justify-between group hover:-translate-y-1 transition-transform duration-500 ${service.className}`}
+              className={`rounded-[2rem] border-2 cursor-pointer border-gray-200 p-8 lg:p-10 flex flex-col justify-between group hover:-translate-y-1 transition-transform duration-500 ${service.className}`}
             >
               <div>
                 <div className="flex justify-between items-start mb-10">
@@ -119,7 +121,7 @@ export const Services = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <h3 className={`text-2xl lg:text-3xl font-bold mb-4 tracking-tight ${service.titleClass}`}>
                   {service.title}
                 </h3>
@@ -132,13 +134,15 @@ export const Services = () => {
               <div className="mt-10 flex items-end justify-between">
                 {service.hasLink && (
                   <Link to="/services" className="inline-flex items-center gap-2 text-xentek-accent font-bold text-sm hover:text-teal-700 transition-colors">
-                    Explore Excellence <ArrowRight size={16} />
+                    Explore Services <ArrowRight size={16} />
                   </Link>
                 )}
-                
+
                 {service.bottomTag && (
                   <div className={`w-full pt-6 border-t flex justify-between items-center ${service.className.includes('bg-xentek-dark') ? 'border-white/10' : 'border-gray-100'}`}>
-                    <span className={`text-xs font-bold tracking-widest ${service.className.includes('bg-xentek-dark') ? 'text-white/70' : 'text-gray-500'}`}>{service.bottomTag}</span>
+                    <span className={`text-xs font-bold tracking-widest flex items-center gap-2 ${service.className.includes('bg-xentek-dark') ? 'text-white/70' : 'text-gray-500'}`}>
+                      {service.bottomTag}
+                    </span>
                     {service.bottomIcon}
                   </div>
                 )}
@@ -146,7 +150,7 @@ export const Services = () => {
             </motion.div>
           ))}
         </div>
-        
+
       </div>
     </section>
   );
