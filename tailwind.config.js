@@ -11,6 +11,7 @@ export default {
         poppins: ['Poppins', 'sans-serif'],
         audiowide: ['Audiowide', 'sans-serif'],
         nunitoSans: ['Nunito Sans', 'sans-serif'],
+        figtree: ['Figtree', 'sans-serif'],
       },
       colors: {
         xentek: {

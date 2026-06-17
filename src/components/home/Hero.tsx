@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MoveRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-12 pb-28 overflow-hidden">
+    <section className="relative pt-8 pb-24 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 -z-10 translate-x-1/3 -translate-y-1/4">
         <div className="w-[800px] h-[800px] rounded-full bg-gradient-to-br from-teal-100/40 to-teal-50/10 blur-3xl" />
@@ -33,7 +33,7 @@ export const Hero = () => {
             <div className="flex flex-wrap justify-center items-center gap-4">
               <Link
                 to="/contact"
-                className="bg-xentek-white text-black border-3 font-poppins px-8 py-3.5 rounded-full font-semibold tracking-wide hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-all cursor-pointer duration-300 shadow-lg shadow-xentek-dark/10 flex items-center gap-2"
+                className="bg-xentek-white text-black border-3 border-gray-300 font-poppins px-8 py-3.5 rounded-full font-semibold tracking-wide hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-all cursor-pointer duration-300 shadow-lg shadow-xentek-dark/10 flex items-center gap-2"
               >
                 Start a Project
               </Link>
@@ -41,7 +41,7 @@ export const Hero = () => {
                 to="/services"
                 className="bg-white text-xentek-dark font-poppins border-3 border-gray-200 px-8 py-3.5 rounded-full font-medium tracking-wide hover:border-xentek-dark transition-all duration-300 shadow-lg shadow-xentek-dark/10 flex items-center gap-2"
               >
-                Explore Services <ArrowRight size={18} />
+                Explore Services <MoveRight size={18} />
               </Link>
             </div>
           </motion.div>

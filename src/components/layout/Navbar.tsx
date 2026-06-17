@@ -23,8 +23,8 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-3 cursor-pointer">
-              <img src={logo} alt="XenTek Logo" className="h-10 w-auto" />
-              <span className="text-2xl font-bold text-xentek-dark tracking-tight">Xen<span className="text-xentek-accent">Tek</span>.</span>
+              <img src={logo} alt="XenTek Logo" className="h-12 w-auto" />
+              <span className="text-[28px] font-semibold font-figtree text-xentek-dark tracking-wide">Xen<span className="text-xentek-accent font-figtree tracking-wide">Tek</span></span>
             </Link>
           </div>
 
@@ -51,7 +51,7 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center">
             <Link
               to="/contact"
-              className="bg-xentek-dark text-white font-poppins px-6 py-2.5 rounded-full text-base font-medium tracking-wide hover:bg-gray-800 transition-colors cursor-pointer duration-300"
+              className="bg-xentek-dark text-white font-figtree px-6 py-2.5 rounded-full text-base font-medium tracking-wide hover:bg-gray-800 transition-colors cursor-pointer duration-300"
             >
               Start a Project
             </Link>
