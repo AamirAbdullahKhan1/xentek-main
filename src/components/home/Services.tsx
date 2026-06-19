@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Layers, Smartphone, Bot, Target, Zap } from 'lucide-react';
+import { ArrowRight, Globe, Layers, Smartphone, Bot, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark, faCubes, faGears, faHeadset} from '@fortawesome/free-solid-svg-icons'; // or free-regular-svg-icons if preferred
+import { faXmark, faCubes, faGears, faHeadset} from '@fortawesome/free-solid-svg-icons';
 
 const services = [
   {
