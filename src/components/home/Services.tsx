@@ -67,7 +67,7 @@ const services = [
     bottomTag: "CONSULTING",
     bottomIcon: <FontAwesomeIcon icon={faHeadset} className="text-gray-600 w-5 h-5" />,
     iconBox: "bg-teal-50",
-  }
+  },
 ];
 
 export const Services = () => {

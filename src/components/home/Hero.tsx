@@ -31,12 +31,7 @@ export const Hero = () => {
             </p>
 
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <Link
-                to="/contact"
-                className="bg-xentek-white text-black border-3 border-gray-300 font-poppins px-8 py-3.5 rounded-full font-semibold tracking-wide hover:border-gray-800 hover:bg-gray-800 hover:text-white transition-all cursor-pointer duration-300 shadow-lg shadow-xentek-dark/10 flex items-center gap-2"
-              >
-                Start a Project
-              </Link>
+              
               <Link
                 to="/services"
                 className="bg-white text-xentek-dark font-poppins border-3 border-gray-200 px-8 py-3.5 rounded-full font-medium tracking-wide hover:border-xentek-dark transition-all duration-300 shadow-lg shadow-xentek-dark/10 flex items-center gap-2"
