@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 const projects = [
   {
-    title: 'Alpha Stream',
-    description: 'A real-time data visualization platform for high frequency trading.',
+    title: 'Real Time Authentication and Threat Detection System',
+    description: 'A real-time Authentication system for high-risk transactions and activities.',
     tags: ['SERVICE', 'DASHBOARD'],
     color: 'bg-teal-700'
   },
   {
-    title: 'EduLogic Pro',
-    description: 'Scaling a custom learning management system for 50k+ users.',
-    tags: ['SERVICE', 'WEB APP'],
+    title: 'Game Developer Portfolio',
+    description: 'Portfolio Website for a Game Developer.',
+    tags: ['SERVICE', 'WEBSITE'],
     color: 'bg-slate-700'
   },
   {
