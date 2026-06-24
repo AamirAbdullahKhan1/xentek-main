@@ -16,10 +16,10 @@ export const Footer = () => {
               Engineering the future with technical precision and design excellence.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.instagram.com/_.xentek._?igsh=MWM0dDgwdXI2eHIxYw==" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors">
+              <a href="https://www.instagram.com/_.xentek._?igsh=MWM0dDgwdXI2eHIxYw==" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors" target='_blank'>
                 <FaInstagram size={20} />
               </a>
-              <a href="https://www.linkedin.com/company/xentek-in/" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors">
+              <a href="https://www.linkedin.com/company/xentek-in/" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors" target='_blank'>
                 <IoLogoLinkedin size={20} />
               </a>
             </div>

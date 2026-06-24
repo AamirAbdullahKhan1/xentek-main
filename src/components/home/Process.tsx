@@ -1,4 +1,5 @@
-import { motion, useScroll, useTransform, useInView, MotionValue } from 'framer-motion';
+import { motion, useScroll, useTransform, useInView } from 'framer-motion';
+import type { MotionValue, Variants } from 'framer-motion';
 import { useRef } from 'react';
 import { Search, Compass, Code2, Rocket, ShieldCheck, Layers, Zap, CheckCircle2 } from 'lucide-react';
 import clientGuideImg from '../../assets/XenTek Client Guide.png';
@@ -136,7 +137,7 @@ const StepCard = ({
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-60px' });
 
-  const variants = {
+  const variants: Variants = {
     hidden: isMobile
       ? { opacity: 0, x: -40 }
       : { opacity: 0, y: 50 },
