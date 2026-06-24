@@ -1,43 +1,41 @@
-import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 const projects = [
   {
     title: 'Real Time Authentication and Threat Detection System',
     description: 'A real-time Authentication system for high-risk transactions and activities.',
     tags: ['SERVICE', 'DASHBOARD'],
-    color: 'bg-teal-700'
+    color: 'bg-teal-700',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000' // Placeholder URL
   },
   {
     title: 'Game Developer Portfolio',
     description: 'Portfolio Website for a Game Developer.',
     tags: ['SERVICE', 'WEBSITE'],
-    color: 'bg-slate-700'
+    color: 'bg-slate-700',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000' // Placeholder URL
   },
   {
-    title: 'Nexus Inventory',
-    description: 'Automated inventory synchronization across global warehouses.',
-    tags: ['SERVICE', 'BACKEND'],
-    color: 'bg-gray-200'
+    title: 'SHE AI',
+    description: 'AI-Powered Automated Solution for Workplace Safety and Healthcare.',
+    tags: ['SERVICE', 'AI & MOBILE APP'],
+    color: 'bg-gray-200',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000' // Placeholder URL
   }
 ];
 
 export const Work = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-xentek-dark mb-4">Featured Work</h2>
+            <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-xentek-dark mb-4">Featured <span>Work</span></h2>
             <p className="text-gray-500 text-lg max-w-2xl">
               Foundational code set for high-stakes industries.
             </p>
           </div>
-          <Link to="/portfolio" className="mt-4 md:mt-0 text-sm font-medium text-xentek-accent hover:text-teal-700 flex items-center gap-1 group">
-            View all cases <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -50,22 +48,25 @@ export const Work = () => {
               transition={{ delay: index * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className={`aspect-[4/3] rounded-2xl mb-6 overflow-hidden relative ${project.color} flex items-center justify-center p-8 shadow-sm group-hover:shadow-xl transition-all duration-500`}>
-                {/* Abstract mockup representation */}
-                <div className="w-full h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg transform group-hover:scale-105 transition-transform duration-500 flex flex-col">
-                   <div className="h-6 border-b border-white/10 flex items-center px-3 gap-1.5">
-                      <div className="w-2 h-2 rounded-full bg-white/30" />
-                      <div className="w-2 h-2 rounded-full bg-white/30" />
-                      <div className="w-2 h-2 rounded-full bg-white/30" />
-                   </div>
-                   <div className="flex-1 p-4 flex gap-4">
-                      <div className="w-1/4 h-full bg-white/5 rounded" />
-                      <div className="w-3/4 flex flex-col gap-4">
-                         <div className="h-1/3 bg-white/10 rounded" />
-                         <div className="h-2/3 bg-white/5 rounded" />
-                      </div>
-                   </div>
-                </div>
+              <div className={`aspect-[4/3] rounded-2xl mb-6 overflow-hidden relative ${project.color} flex items-center justify-center ${project.image ? '' : 'p-8'} shadow-sm group-hover:shadow-xl transition-all duration-500`}>
+                {project.image ? (
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                ) : (
+                  <div className="w-full h-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg transform group-hover:scale-105 transition-transform duration-500 flex flex-col">
+                     <div className="h-6 border-b border-white/10 flex items-center px-3 gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-white/30" />
+                        <div className="w-2 h-2 rounded-full bg-white/30" />
+                        <div className="w-2 h-2 rounded-full bg-white/30" />
+                     </div>
+                     <div className="flex-1 p-4 flex gap-4">
+                        <div className="w-1/4 h-full bg-white/5 rounded" />
+                        <div className="w-3/4 flex flex-col gap-4">
+                           <div className="h-1/3 bg-white/10 rounded" />
+                           <div className="h-2/3 bg-white/5 rounded" />
+                        </div>
+                     </div>
+                  </div>
+                )}
               </div>
 
               <div className="flex gap-2 mb-3">

@@ -1,5 +1,5 @@
-import { motion, useScroll, useTransform, useInView, useAnimation } from 'framer-motion';
-import { useRef, useEffect } from 'react';
+import { motion, useScroll, useTransform, useInView, MotionValue } from 'framer-motion';
+import { useRef } from 'react';
 import { Search, Compass, Code2, Rocket, ShieldCheck, Layers, Zap, CheckCircle2 } from 'lucide-react';
 import clientGuideImg from '../../assets/XenTek Client Guide.png';
 
@@ -49,7 +49,7 @@ const steps = [
    Animated Gradient Line (Desktop)
    Loops blue→white→blue from left to right
 ───────────────────────────────────────────── */
-const AnimatedLine = ({ progress }: { progress: any }) => {
+const AnimatedLine = ({ progress }: { progress: MotionValue<number> }) => {
   // scaleX grows as user scrolls into the section
   return (
     <div className="relative h-[3px] w-full rounded-full overflow-visible">
@@ -221,7 +221,6 @@ const StepCard = ({
 export const Process = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
-  const isLineInView = useInView(lineRef, { once: true, margin: '-80px' });
 
   const { scrollYProgress } = useScroll({
     target: lineRef,

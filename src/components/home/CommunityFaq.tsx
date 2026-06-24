@@ -25,7 +25,7 @@ export const CommunityFaq = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Community Banner */}
-        <div className="bg-xentek-dark rounded-3xl p-10 md:p-16 mb-32 flex flex-col md:flex-row items-center justify-between shadow-2xl shadow-teal-900/20 relative overflow-hidden">
+        {/*<div className="bg-xentek-dark rounded-3xl p-10 md:p-16 mb-32 flex flex-col md:flex-row items-center justify-between shadow-2xl shadow-teal-900/20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl -z-10" />
           
           <div className="md:w-1/2 mb-10 md:mb-0">
@@ -49,17 +49,17 @@ export const CommunityFaq = () => {
               <div className="text-teal-200 text-xs font-semibold tracking-wider uppercase">Monthly<br/>Events</div>
             </div>
           </div>
-        </div>
+        </div>*/}
 
         {/* FAQ */}
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-xentek-dark text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold font-poppins text-xentek-dark text-center mb-12">Frequently Asked Questions</h2>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
-                className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-teal-200 transition-colors"
+                className="border border-gray-200 rounded-2xl font-poppins overflow-hidden bg-white hover:border-teal-200 transition-colors"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}

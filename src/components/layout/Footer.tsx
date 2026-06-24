@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { BookHeart, Link2 } from 'lucide-react';
+import { FaInstagram } from "react-icons/fa6";
+import { IoLogoLinkedin } from "react-icons/io5";
 
 export const Footer = () => {
   return (
@@ -15,11 +16,11 @@ export const Footer = () => {
               Engineering the future with technical precision and design excellence.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors">
-                <BookHeart size={18} />
+              <a href="https://www.instagram.com/_.xentek._?igsh=MWM0dDgwdXI2eHIxYw==" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors">
+                <FaInstagram size={20} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors">
-                <Link2 size={18} />
+              <a href="https://www.linkedin.com/company/xentek-in/" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-xentek-accent hover:border-xentek-accent transition-colors">
+                <IoLogoLinkedin size={20} />
               </a>
             </div>
           </div>
@@ -58,10 +59,6 @@ export const Footer = () => {
           <p className="text-xs text-gray-400 mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} XenTek. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-xs text-gray-400">
-            <span>Made with precision</span>
-            <span>Version 1.0.0</span>
-          </div>
         </div>
       </div>
     </footer>
