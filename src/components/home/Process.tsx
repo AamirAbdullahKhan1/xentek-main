@@ -334,7 +334,7 @@ export const Process = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-xentek-dark mb-4">
+            <h2 className="text-3xl md:text-5xl font-poppins font-semibold text-xentek-dark mb-4">
               Our Technical Process
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto text-lg">

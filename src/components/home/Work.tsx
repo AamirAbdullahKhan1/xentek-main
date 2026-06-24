@@ -6,21 +6,21 @@ const projects = [
     description: 'A real-time Authentication system for high-risk transactions and activities.',
     tags: ['SERVICE', 'DASHBOARD'],
     color: 'bg-teal-700',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000' // Placeholder URL
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000'
   },
   {
     title: 'Game Developer Portfolio',
     description: 'Portfolio Website for a Game Developer.',
     tags: ['SERVICE', 'WEBSITE'],
     color: 'bg-slate-700',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000' // Placeholder URL
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1000'
   },
   {
     title: 'SHE AI',
     description: 'AI-Powered Automated Solution for Workplace Safety and Healthcare.',
     tags: ['SERVICE', 'AI & MOBILE APP'],
     color: 'bg-gray-200',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000' // Placeholder URL
+    image: 'https://live.staticflickr.com/65535/55353243107_db3e25d06d_c.jpg'
   }
 ];
 
