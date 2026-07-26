@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Check, ImageIcon } from 'lucide-react';
 
 /** Paste your SHE-AI product / phone mockup image URL here */
