@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="relative pt-28 pb-20 bg-white overflow-hidden">
+    <section className="relative pt-20 pb-20 bg-white overflow-hidden">
       {/* Subtle grid background */}
       <div
         className="absolute inset-0 opacity-[0.035]"
@@ -63,8 +63,8 @@ export const Hero = () => {
             { value: '10+', label: 'Active Projects' },
           ].map((stat) => (
             <div key={stat.label}>
-              <div className="text-3xl font-bold text-xentek-dark tracking-tight mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-400 font-medium tracking-wide">{stat.label}</div>
+              <div className="text-3xl font-bold font-figtree text-xentek-dark tracking-tight mb-1">{stat.value}</div>
+              <div className="text-sm text-gray-400 font-medium font-figtree tracking-wide">{stat.label}</div>
             </div>
           ))}
         </motion.div>
