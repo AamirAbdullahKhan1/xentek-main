@@ -117,7 +117,7 @@ export const Philosophy = () => {
                     >
                       <Icon className="w-5 h-5" style={{ color: item.accent }} strokeWidth={1.75} />
                     </motion.div>
-                    <span className="absolute -top-1 -right-1 text-[10px] font-bold text-gray-300 font-figtree tracking-wider">
+                    <span className="absolute top-1 -right-1 text-[14px] font-bold text-gray-500 font-figtree tracking-wider">
                       0{i + 1}
                     </span>
                   </div>

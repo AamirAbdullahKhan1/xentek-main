@@ -93,7 +93,7 @@ export const ServiceModules = () => {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-xs font-bold tracking-[0.2em] uppercase text-xentek-accent mb-3"
+            className="text-xs font-bold tracking-[0.2em] uppercase text-xentek-accent mb-5"
           >
             Modular Engagement
           </motion.p>
@@ -150,7 +150,7 @@ export const ServiceModules = () => {
                       <Icon className={`w-5 h-5 ${colors.iconColor}`} strokeWidth={1.75} />
                     </div>
                     {mod.featured && (
-                      <span className="text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full bg-xentek-dark text-white">
+                      <span className="text-[10px] font-bold font-figtree tracking-widest uppercase px-2.5 py-1 rounded-full bg-xentek-dark text-white">
                         Popular
                       </span>
                     )}
@@ -185,17 +185,17 @@ export const ServiceModules = () => {
 
                   <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-gray-100">
                     <div>
-                      <p className="text-[10px] uppercase tracking-wider text-gray-400 font-medium mb-0.5">
+                      <p className="text-[13px] uppercase tracking-wider text-gray-500 font-figtree font-medium mb-0.5">
                         {mod.price === 'Custom' ? 'Pricing' : 'Starts from'}
                       </p>
                       <p className="text-xl font-bold text-xentek-dark font-figtree">{mod.price}</p>
                     </div>
                     <Link
                       to="/contact"
-                      className={`inline-flex items-center gap-1.5 text-white text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-300 ${colors.btn}`}
+                      className={`inline-flex items-center gap-1.5 text-white text-sm font-figtree font-medium px-5 py-2.5 rounded-full transition-all duration-300 ${colors.btn}`}
                     >
                       {mod.cta}
-                      <ArrowUpRight className="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      <ArrowUpRight className="w-3.5 h-3.5 opacity-80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </Link>
                   </div>
                 </div>

@@ -18,7 +18,7 @@ const factors = [
     title: 'Feature Depth',
     impact: 'High',
     desc: 'Core flows, edge cases, and admin surfaces drive the majority of engineering hours. More polished UX and edge-case coverage increases investment.',
-    weight: 85,
+    weight: 30,
   },
   {
     id: 'integrations',
@@ -27,7 +27,7 @@ const factors = [
     title: 'Third-Party Integrations',
     impact: 'Medium',
     desc: 'Payments, CRMs, analytics, and legacy systems each add mapping, auth, and failure-handling work. Clean APIs keep this efficient.',
-    weight: 60,
+    weight: 15,
   },
   {
     id: 'design',
@@ -36,43 +36,43 @@ const factors = [
     title: 'Design & Experience',
     impact: 'Medium',
     desc: 'Custom design systems, motion, and accessibility audits raise quality — and cost — versus template-driven UIs.',
-    weight: 55,
+    weight: 15,
   },
   {
     id: 'scope',
     icon: Target,
     label: 'Scope',
     title: 'Project Scope',
-    impact: 'Critical',
+    impact: 'Medium',
     desc: 'The defining lever. Clear boundaries, phased milestones, and prioritized backlogs keep quotes accurate and timelines predictable.',
-    weight: 95,
+    weight: 20,
   },
   {
     id: 'scale',
     icon: Gauge,
     label: 'Scale',
     title: 'Scale & Performance',
-    impact: 'High',
+    impact: 'Minimal',
     desc: 'Concurrency targets, caching, and infra choices matter when you expect growth. Building for day-one traffic is cheaper than retrofitting later.',
-    weight: 70,
+    weight: 10,
   },
   {
     id: 'deployment',
     icon: Rocket,
     label: 'Deployment',
     title: 'Deployment & Ops',
-    impact: 'Medium',
+    impact: 'Minimal',
     desc: 'CI/CD, environments, observability, and rollback strategy protect launches. Production-grade pipelines are an investment in sleep.',
-    weight: 50,
+    weight: 5,
   },
   {
     id: 'support',
     icon: LifeBuoy,
     label: 'Support',
     title: 'Ongoing Support',
-    impact: 'Variable',
+    impact: 'Minimal',
     desc: 'Post-launch maintenance, monitoring, and iteration keep the product healthy. We scope retainers to match your risk tolerance.',
-    weight: 40,
+    weight: 5,
   },
 ];
 
@@ -183,7 +183,7 @@ export const CostFactors = () => {
                     <Icon className={`${isCenter ? 'w-6 h-6' : 'w-5 h-5'}`} strokeWidth={1.75} />
                   </div>
                   <span
-                    className={`text-[11px] md:text-xs font-semibold tracking-wide transition-colors ${
+                    className={`text-[11px] md:text-[13px] font-semibold font-figtree tracking-wide transition-colors ${
                       isActive ? 'text-xentek-dark' : 'text-gray-400'
                     }`}
                   >
@@ -212,7 +212,7 @@ export const CostFactors = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-xentek-dark tracking-tight">{current.title}</h3>
-                  <span className="inline-flex mt-1 text-[11px] font-bold uppercase tracking-wider text-xentek-accent bg-teal-50 px-2 py-0.5 rounded-full">
+                  <span className="inline-flex mt-1 text-[12px] font-bold font-figtree uppercase tracking-wider text-xentek-accent bg-teal-50 px-2 py-0.5 rounded-full">
                     Impact: {current.impact}
                   </span>
                 </div>
@@ -223,7 +223,7 @@ export const CostFactors = () => {
                   {current.desc}
                 </p>
                 <div>
-                  <div className="flex justify-between text-xs text-gray-400 mb-1.5 font-medium">
+                  <div className="flex justify-between  font-figtree text-[12px] text-gray-500 mb-1.5 font-medium">
                     <span>Cost influence</span>
                     <span>{current.weight}%</span>
                   </div>

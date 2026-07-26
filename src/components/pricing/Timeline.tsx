@@ -95,7 +95,7 @@ const TimelineCard = ({
       initial={{ opacity: 0, y: 48, scale: 0.92 }}
       animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
       transition={{
-        duration: 0.55,
+        duration: 0.25,
         delay: index * 0.12,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
@@ -104,7 +104,7 @@ const TimelineCard = ({
       <motion.div
         whileHover={{ y: -8 }}
         transition={{ type: 'spring', stiffness: 280, damping: 20 }}
-        className="group relative bg-white rounded-2xl border border-gray-100 p-5 text-center h-full shadow-sm hover:shadow-lg hover:shadow-teal-900/5 hover:border-teal-100 transition-all duration-300"
+        className="group relative bg-white rounded-2xl border border-gray-100 p-5 cursor-pointer text-center h-full shadow-sm hover:shadow-lg hover:shadow-teal-900/5 hover:border-teal-100 transition-all duration-300"
       >
         <div className="absolute -top-3 left-1/2 -translate-x-1/2">
           <motion.div
@@ -149,7 +149,7 @@ export const Timeline = () => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-xentek-accent mb-4"
+            className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-xentek-accent mb-5"
           >
             <Flag className="w-3.5 h-3.5" />
             Start → End
@@ -175,12 +175,12 @@ export const Timeline = () => {
         </div>
 
         {/* Start / End labels */}
-        <div className="hidden md:flex justify-between items-center max-w-5xl mx-auto mb-2 px-2">
+        <div className="hidden md:flex justify-between items-center max-w-5xl mx-auto mb-5 px-2">
           <motion.span
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-bold tracking-[0.15em] uppercase text-teal-600"
+            className="text-[13px] font-bold tracking-[0.15em] uppercase text-teal-600"
           >
             Start
           </motion.span>
@@ -188,7 +188,7 @@ export const Timeline = () => {
             initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-bold tracking-[0.15em] uppercase text-teal-600"
+            className="text-[13px] font-bold tracking-[0.15em] uppercase text-teal-600"
           >
             End
           </motion.span>
