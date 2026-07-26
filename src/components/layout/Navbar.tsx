@@ -5,9 +5,9 @@ import { useState } from 'react';
 import logo from '../../assets/xentek-logo.png';
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
+  // { name: 'About', path: '/about' }, // commented out — reserved for future use
   { name: 'Services', path: '/services' },
+  { name: 'Pricing', path: '/pricing' },
   { name: 'Solutions', path: '/solutions' },
   { name: 'Contact', path: '/contact' },
 ];

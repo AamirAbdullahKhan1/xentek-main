@@ -7,10 +7,6 @@ export const Hero = () => {
     <section className="pt-24 pb-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-100/50 text-teal-800 text-sm font-semibold mb-6">
-          CORE VALUES
-        </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -28,12 +24,7 @@ export const Hero = () => {
               ambitious teams.
             </p>
 
-            <Link
-              to="/portfolio"
-              className="inline-flex items-center gap-2 bg-xentek-dark text-white px-8 py-3.5 rounded-full font-medium hover:bg-xentek-accent transition-all duration-300 shadow-lg shadow-xentek-dark/10"
-            >
-              Our Roadmap <ArrowRight size={18} />
-            </Link>
+            
           </motion.div>
 
           <motion.div
@@ -52,16 +43,7 @@ export const Hero = () => {
                </div>
             </div>
 
-            {/* Floating Stats Card */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl shadow-teal-900/10 border border-gray-100 z-10"
-            >
-               <div className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">Performance SLA</div>
-               <div className="text-4xl font-bold text-xentek-dark mb-1">99.8%</div>
-               <div className="text-sm text-gray-500">unwavering uptime, <br/> 3 years straight.</div>
-            </motion.div>
+            
           </motion.div>
         </div>
 

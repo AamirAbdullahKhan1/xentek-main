@@ -1,84 +1,138 @@
 import { motion } from 'framer-motion';
+import { Zap, TrendingUp, Palette } from 'lucide-react';
+
+const tracks = [
+  {
+    icon: Zap,
+    tag: 'RAPID DEPLOYMENT',
+    tagColor: 'text-teal-700 bg-teal-50 border-teal-200',
+    title: 'MVP Build',
+    description:
+      'For early-stage startups that need to validate a market hypothesis fast — without compromising on architectural integrity or future scalability.',
+    outcome: 'Ready-to-launch product with core features.',
+    highlight: false,
+  },
+  {
+    icon: TrendingUp,
+    tag: 'PERFORMANCE FOCUS',
+    tagColor: 'text-teal-300 bg-teal-900/50 border-teal-700',
+    title: 'Scale Pack',
+    description:
+      'For growing companies hitting performance ceilings or preparing for significant user-growth milestones. We design for the traffic you\'re about to have.',
+    outcome: '99.9% uptime and sub-100ms response times.',
+    highlight: true,
+  },
+  {
+    icon: Palette,
+    tag: 'UI/UX AUDIT',
+    tagColor: 'text-gray-600 bg-gray-100 border-gray-200',
+    title: 'Design Sprint',
+    description:
+      'Established products that need a modern visual refresh or an alignment to contemporary user experience standards and accessibility requirements.',
+    outcome: 'High-fidelity prototypes and complete design systems.',
+    highlight: false,
+  },
+];
 
 export const Matrix = () => {
   return (
-    <section className="py-24 bg-white border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+    <section className="py-28 bg-xentek-dark relative overflow-hidden">
+      {/* Background accents */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-xentek-dark mb-4">Strategic Service Matrix</h2>
-          <p className="text-gray-500 text-sm tracking-wider uppercase">A framework for choosing your path to technical excellence.</p>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-gray-400 text-xs font-bold tracking-[0.2em] uppercase mb-6"
+          >
+            Service Tracks
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.08 }}
+            className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4"
+          >
+            Choose your path to excellence.
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.16 }}
+            className="text-gray-400 text-base max-w-xl mx-auto font-poppins"
+          >
+            Every project is different. We've structured our services into three focused tracks so you can engage us at exactly the right level.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          {/* MVP Build */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-3xl p-10 border border-gray-200 flex flex-col justify-between"
-          >
-            <div>
-               <div className="inline-block px-3 py-1 bg-teal-100 text-teal-800 text-xs font-bold tracking-wider rounded uppercase mb-6">RAPID DEPLOYMENT</div>
-               <h3 className="text-2xl font-bold text-gray-900 mb-4">MVP Build</h3>
-               <p className="text-gray-500 text-sm leading-relaxed mb-12">
-                 Perfect for early-stage startups needing market validation without compromising on architectural integrity.
-               </p>
-            </div>
-            <div>
-               <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Outcome</div>
-               <div className="text-lg font-bold text-gray-900">Ready-to-launch product with core features.</div>
-            </div>
-          </motion.div>
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          {tracks.map((track, index) => {
+            const Icon = track.icon;
+            return (
+              <motion.div
+                key={track.title}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.12, duration: 0.6, ease: 'easeOut' }}
+                className={`relative rounded-3xl p-8 flex flex-col ${
+                  track.highlight
+                    ? 'bg-teal-500/10 border-2 border-teal-500/40 md:-translate-y-5 shadow-2xl shadow-teal-500/10'
+                    : 'bg-white/5 border border-white/10'
+                }`}
+              >
+                {track.highlight && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <div className="px-4 py-1 bg-teal-500 rounded-full text-xs font-bold text-white tracking-widest uppercase shadow-lg">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
 
-          {/* Scale Pack */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="bg-xentek-dark rounded-3xl p-10 border border-teal-900 flex flex-col justify-between relative overflow-hidden shadow-2xl shadow-teal-900/20 transform md:-translate-y-4"
-          >
-            <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/10 rounded-full blur-2xl -z-10" />
-            <div>
-               <div className="inline-block px-3 py-1 bg-teal-900 border border-teal-700 text-teal-300 text-xs font-bold tracking-wider rounded uppercase mb-6">PERFORMANCE FOCUS</div>
-               <h3 className="text-2xl font-bold text-white mb-4">Scale Pack</h3>
-               <p className="text-teal-100/80 text-sm leading-relaxed mb-12">
-                 For growing companies facing performance bottlenecks or preparing for significant traffic surges.
-               </p>
-            </div>
-            <div>
-               <div className="text-xs font-bold text-teal-500 uppercase tracking-wider mb-2">Target</div>
-               <div className="text-xl font-bold text-white">99.9% uptime and sub-100ms response times.</div>
-            </div>
-          </motion.div>
+                {/* Icon */}
+                <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-6 ${
+                  track.highlight ? 'bg-teal-500/20' : 'bg-white/10'
+                }`}>
+                  <Icon size={18} className={track.highlight ? 'text-teal-400' : 'text-gray-400'} />
+                </div>
 
-          {/* Design Sprint */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="bg-white rounded-3xl p-10 border border-gray-200 flex flex-col justify-between"
-          >
-            <div>
-               <div className="inline-block px-3 py-1 bg-gray-200 text-gray-700 text-xs font-bold tracking-wider rounded uppercase mb-6">UI/UX AUDIT</div>
-               <h3 className="text-2xl font-bold text-gray-900 mb-4">Design Sprint</h3>
-               <p className="text-gray-500 text-sm leading-relaxed mb-12">
-                 Established apps needing a modern refresh and alignment with contemporary user experience standards.
-               </p>
-            </div>
-            <div>
-               <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Outcome</div>
-               <div className="text-lg font-bold text-gray-900">High-fidelity prototypes and design systems.</div>
-            </div>
-          </motion.div>
+                {/* Tag */}
+                <div className={`inline-flex self-start px-3 py-1 rounded-md text-[10px] font-bold tracking-[0.2em] uppercase border mb-5 ${track.tagColor}`}>
+                  {track.tag}
+                </div>
 
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white mb-3">{track.title}</h3>
+
+                {/* Description */}
+                <p className={`text-sm leading-relaxed mb-8 font-poppins ${track.highlight ? 'text-teal-100/70' : 'text-gray-400'}`}>
+                  {track.description}
+                </p>
+
+                {/* Outcome */}
+                <div className={`mt-auto pt-6 border-t ${track.highlight ? 'border-teal-500/20' : 'border-white/10'}`}>
+                  <div className="text-[10px] font-bold tracking-[0.2em] uppercase mb-1.5 ${track.highlight ? 'text-teal-400' : 'text-gray-500'}">
+                    <span className={track.highlight ? 'text-teal-400' : 'text-gray-500'}>Outcome</span>
+                  </div>
+                  <div className={`text-sm font-semibold ${track.highlight ? 'text-white' : 'text-gray-300'}`}>
+                    {track.outcome}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
       </div>
     </section>
   );
 };
-

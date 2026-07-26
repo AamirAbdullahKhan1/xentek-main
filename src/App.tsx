@@ -1,16 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { Home } from './pages/Home';
-import { About } from './pages/About';
+// import { About } from './pages/About'; // commented out — reserved for future use
 import { Services } from './pages/Services';
+import { Pricing } from './pages/Pricing';
 
 function App() {
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/services" element={<Services />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Layout>
