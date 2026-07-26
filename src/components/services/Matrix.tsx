@@ -106,7 +106,7 @@ export const Matrix = () => {
                 </div>
 
                 {/* Tag */}
-                <div className={`inline-flex self-start px-3 py-1 rounded-md text-[10px] font-bold tracking-[0.2em] uppercase border mb-5 ${track.tagColor}`}>
+                <div className={`inline-flex self-start font-figtree px-3 py-1 rounded-md text-[10px] font-bold tracking-[0.2em] uppercase border mb-5 ${track.tagColor}`}>
                   {track.tag}
                 </div>
 
@@ -121,9 +121,9 @@ export const Matrix = () => {
                 {/* Outcome */}
                 <div className={`mt-auto pt-6 border-t ${track.highlight ? 'border-teal-500/20' : 'border-white/10'}`}>
                   <div className="text-[10px] font-bold tracking-[0.2em] uppercase mb-1.5 ${track.highlight ? 'text-teal-400' : 'text-gray-500'}">
-                    <span className={track.highlight ? 'text-teal-400' : 'text-gray-500'}>Outcome</span>
+                    <span className={track.highlight ? 'text-teal-400 font-figtree' : 'text-gray-300 font-figtree'}>Outcome</span>
                   </div>
-                  <div className={`text-sm font-semibold ${track.highlight ? 'text-white' : 'text-gray-300'}`}>
+                  <div className={`text-sm font-semibold ${track.highlight ? 'text-white font-poppins' : 'text-gray-300 font-poppins'}`}>
                     {track.outcome}
                   </div>
                 </div>

@@ -39,7 +39,7 @@ export const Support = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-gray-400 text-xs font-bold tracking-[0.2em] uppercase mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-gray-500 text-xs font-bold tracking-[0.2em] uppercase mb-8">
                 Our Process
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-xentek-dark leading-tight tracking-tight mb-16">
@@ -69,11 +69,11 @@ export const Support = () => {
                         <Icon size={16} className="text-teal-400" />
                       </div>
 
-                      <div className="pt-1.5">
-                        <div className="text-[10px] font-bold text-gray-400 tracking-[0.25em] uppercase mb-1.5">
+                      <div className="pt-2">
+                        <div className="text-[12px] font-bold text-gray-400 tracking-[0.25em] uppercase mb-1.5">
                           Step {item.step}
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
+                        <h3 className="text-xl font-bold font-figtree text-gray-900 mb-2">{item.title}</h3>
                         <p className="text-gray-500 text-sm leading-relaxed max-w-md font-poppins">
                           {item.description}
                         </p>
@@ -115,14 +115,14 @@ export const Support = () => {
 
                 <Link
                   to="/contact"
-                  className="group flex items-center justify-between w-full bg-white text-xentek-dark px-7 py-4 rounded-2xl font-bold text-sm hover:bg-teal-50 transition-colors duration-300 shadow-xl shadow-white/10 mb-6"
+                  className="group flex items-center justify-between w-full bg-white text-xentek-dark px-7 py-4 rounded-2xl font-figtree font-bold text-[17px] hover:bg-teal-50 transition-colors duration-300 shadow-xl shadow-white/10 mb-6"
                 >
                   Schedule Free Consultation
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
                 </Link>
 
                 {/* Assurance row */}
-                <div className="flex items-center gap-3 text-xs text-gray-500">
+                <div className="flex items-center gap-3 text-[12px] font-figtree pt-2 text-gray-300">
                   <div className="w-2 h-2 rounded-full bg-green-500 shrink-0" />
                   Average response time under 24 hours
                 </div>
@@ -135,8 +135,8 @@ export const Support = () => {
                     { val: '24/7', label: 'Support' },
                   ].map((s) => (
                     <div key={s.label}>
-                      <div className="text-lg font-bold text-white">{s.val}</div>
-                      <div className="text-[10px] text-gray-500 uppercase tracking-wider mt-0.5">{s.label}</div>
+                      <div className="text-lg font-bold font-figtree text-white">{s.val}</div>
+                      <div className="text-[10px] text-gray-300 font-poppins uppercase tracking-wider mt-0.5">{s.label}</div>
                     </div>
                   ))}
                 </div>

@@ -27,7 +27,7 @@ const services = [
     iconColor: 'text-indigo-600',
     iconBg: 'bg-indigo-50',
     accentColor: 'bg-indigo-500',
-    title: 'Application Development',
+    title: 'Web & Moble Application',
     tagline: 'Complex problems, elegant solutions.',
     description:
       'Custom web applications and dashboards built with modern, scalable frameworks. Whether it\'s a customer portal, internal tool, or SaaS product — we prioritize speed, security, and frictionless user journeys.',
@@ -45,7 +45,7 @@ const services = [
     iconColor: 'text-orange-600',
     iconBg: 'bg-orange-50',
     accentColor: 'bg-orange-500',
-    title: 'Backend Systems & APIs',
+    title: 'Business Systems & Automation',
     tagline: 'The engine behind the curtain.',
     description:
       'Robust, distributed backend architectures designed for performance and resilience. We design APIs, microservices, and cloud infrastructure that scales gracefully with your user growth.',
@@ -185,13 +185,13 @@ const visuals: Record<string, React.ReactNode> = {
 
 export const ServiceDetails = () => {
   return (
-    <section className="py-4 bg-white">
+    <section className="py-4 pb-30 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
           <div className="h-px flex-1 bg-gray-100" />
-          <span className="text-xs font-bold text-gray-400 tracking-[0.25em] uppercase">What we do</span>
+          <span className="text-[18px] font-bold text-gray-400 tracking-[0.25em] uppercase">What we do</span>
           <div className="h-px flex-1 bg-gray-100" />
         </div>
 
@@ -213,10 +213,10 @@ export const ServiceDetails = () => {
                 <div className={isEven ? 'order-1' : 'order-1 lg:order-2'}>
                   {/* Service number + icon */}
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-11 h-11 ${service.iconBg} rounded-xl flex items-center justify-center`}>
+                    <div className={`w-12 h-12 ${service.iconBg} rounded-xl flex items-center justify-center`}>
                       <Icon className={service.iconColor} size={20} />
                     </div>
-                    <span className="text-xs font-bold text-gray-300 tracking-[0.3em] font-mono">{service.id}</span>
+                    <span className="text-[16px] font-bold text-gray-600 tracking-[0.3em] font-mono">{service.id}</span>
                   </div>
 
                   {/* Tagline */}
