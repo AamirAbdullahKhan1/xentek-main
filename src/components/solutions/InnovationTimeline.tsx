@@ -3,7 +3,7 @@ import { HeartPulse, Store, Brain, Building2, Calendar } from 'lucide-react';
 
 const milestones = [
   {
-    year: '2026',
+    year: '2023',
     title: 'Foundation Year',
     desc: 'Platform vision takes shape',
     Icon: Calendar,
@@ -43,7 +43,7 @@ export const InnovationTimeline = () => {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#109e9b] mb-3"
+            className="text-[13px] font-bold font-figtree tracking-[0.2em] uppercase text-[#109e9b] mb-3"
           >
             Roadmap
           </motion.p>
@@ -51,7 +51,7 @@ export const InnovationTimeline = () => {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-xentek-dark tracking-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold font-figtree tracking-normal text-xentek-dark"
           >
             Innovation Timeline
           </motion.h2>
@@ -81,15 +81,15 @@ export const InnovationTimeline = () => {
               >
                 <motion.div
                   whileHover={{ scale: 1.08, y: -4 }}
-                  className="w-16 h-16 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center mb-4 relative z-10"
+                  className="w-16 h-16 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center cursor-pointer mb-4 relative z-10"
                 >
-                  <m.Icon className="w-6 h-6 text-[#109e9b]" strokeWidth={1.6} />
+                  <m.Icon className="w-7 h-7  text-[#109e9b]" strokeWidth={1.6} />
                 </motion.div>
-                <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-[#109e9b] mb-1.5">
+                <span className="text-[13px] font-bold font-figtree tracking-[0.2em] uppercase text-[#109e9b] mb-1.5">
                   {m.year}
                 </span>
-                <h3 className="text-sm font-bold text-xentek-dark mb-1 tracking-tight">{m.title}</h3>
-                <p className="text-xs text-gray-500 font-poppins leading-relaxed px-1">{m.desc}</p>
+                <h3 className="text-[15px] tracking-wide font-bold font-figtree text-xentek-dark mb-1 tracking-tight">{m.title}</h3>
+                <p className="text-[13px] text-gray-500 font-poppins leading-relaxed px-1">{m.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -107,19 +107,19 @@ export const InnovationTimeline = () => {
               className="flex gap-4"
             >
               <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-xl bg-white border border-gray-100 shadow-sm flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center">
                   <m.Icon className="w-5 h-5 text-[#109e9b]" strokeWidth={1.6} />
                 </div>
                 {i < milestones.length - 1 && (
-                  <div className="w-px flex-1 min-h-8 bg-gray-100 my-1" />
+                  <div className="w-px flex-1 min-h-8 bg-gray-300 my-1" />
                 )}
               </div>
               <div className="pb-6 pt-1">
-                <span className="text-[10px] font-bold tracking-wider uppercase text-[#109e9b]">
+                <span className="text-[12px] font-figtree font-bold tracking-wider uppercase text-[#109e9b]">
                   {m.year}
                 </span>
-                <h3 className="text-sm font-bold text-xentek-dark">{m.title}</h3>
-                <p className="text-xs text-gray-500 font-poppins">{m.desc}</p>
+                <h3 className="text-[15px] font-figtree tracking-wide font-bold text-xentek-dark">{m.title}</h3>
+                <p className="text-[13px] text-gray-500 font-poppins">{m.desc}</p>
               </div>
             </motion.div>
           ))}

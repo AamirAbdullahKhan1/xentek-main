@@ -103,14 +103,14 @@ const BlueprintVisual = () => (
 
 export const XenRetail = () => {
   return (
-    <section id="xenretail" className="py-20 md:py-28 bg-[#f7f8f9] relative overflow-hidden scroll-mt-24">
+    <section id="xenretail" className="py-20 md:py-28 bg-[#ffff] relative overflow-hidden scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center gap-3 mb-8">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-[11px] font-bold tracking-wider uppercase border border-amber-100"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-[11px] font-figtree font-bold tracking-wider uppercase border border-amber-100"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
             Coming Soon
@@ -120,7 +120,7 @@ export const XenRetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.05 }}
-            className="text-xs text-gray-400 font-medium tracking-wide"
+            className="text-[13px] text-gray-500 font-medium font-figtree tracking-wide"
           >
             Retail Technology · SaaS · Business Intelligence
           </motion.p>
@@ -148,19 +148,20 @@ export const XenRetail = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-xentek-dark tracking-tight mb-4">
               XenRetail OS
             </h3>
-            <p className="text-gray-500 font-poppins text-sm md:text-base leading-relaxed mb-4">
+            <p className="text-gray-500 font-figtree text-[15px] md:text-[18px] leading-relaxed mb-4">
               XenRetail OS is a next-generation retail operating platform designed to help businesses
               streamline operations through intelligent automation, inventory management, AI-powered
               analytics, customer insights, and unified digital workflows.
             </p>
-            <p className="text-gray-500 font-poppins text-sm md:text-base leading-relaxed mb-8">
+            <p className="text-gray-500 font-figtree text-[15px] md:text-[18px] leading-relaxed mb-8">
               Built to simplify everyday retail operations while providing actionable business
               intelligence for sustainable growth.
             </p>
             <button
               type="button"
               disabled
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-xentek-dark/90 text-white text-sm font-medium cursor-not-allowed opacity-90"
+              title='Coming Soon!'
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-xentek-dark/90 text-white text-sm font-medium font-figtree cursor-not-allowed opacity-90"
             >
               <Lock className="w-3.5 h-3.5 opacity-70" />
               Launching Soon

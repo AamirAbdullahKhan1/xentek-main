@@ -17,17 +17,17 @@ const flow = [
 
 export const Philosophy = () => {
   return (
-    <section className="py-20 md:py-28 bg-[#f7f8f9] relative overflow-hidden">
+    <section className="py-16 md:py-28 bg-[#fffff] relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-xentek-dark tracking-tight mb-5"
+            className="text-3xl md:text-4xl lg:text-5xl font-figtree font-bold text-xentek-dark tracking-wide mb-5"
           >
-            Engineering Technology{' '}
-            <span className="italic font-serif text-[#109e9b]">Beyond Client Projects</span>
+            Engineering Technology
+            <span className="italic font-serif tracking-normal text-[#109e9b] block mt-3"> "Beyond Client Projects"</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -69,11 +69,11 @@ export const Philosophy = () => {
             >
               <motion.div
                 whileHover={{ y: -6 }}
-                className="w-16 h-16 rounded-2xl bg-white border border-gray-100 shadow-md shadow-[#109e9b]/5 flex items-center justify-center mb-3"
+                className="w-16 h-16 cursor-pointer rounded-2xl bg-white border border-gray-100 shadow-md shadow-[#109e9b]/5 flex items-center justify-center mb-3"
               >
-                <step.Icon className="w-6 h-6 text-[#109e9b]" strokeWidth={1.6} />
+                <step.Icon className="w-7 h-7 text-[#109e9b]" strokeWidth={1.6} />
               </motion.div>
-              <span className="text-xs font-bold text-xentek-dark tracking-tight px-1">
+              <span className="text-[15px] font-figtree font-bold text-xentek-dark tracking-tight px-1">
                 {step.title}
               </span>
             </motion.div>
@@ -92,9 +92,9 @@ export const Philosophy = () => {
               className="flex flex-col items-center"
             >
               <div className="w-14 h-14 rounded-2xl bg-white border border-gray-100 shadow-sm flex items-center justify-center">
-                <step.Icon className="w-5 h-5 text-[#109e9b]" strokeWidth={1.6} />
+                <step.Icon className="w-6 h-6 text-[#109e9b]" strokeWidth={1.6} />
               </div>
-              <span className="text-xs font-bold text-xentek-dark mt-2 mb-1">{step.title}</span>
+              <span className="text-[15px] font-figtree font-bold text-xentek-dark mt-2 mb-1">{step.title}</span>
               {i < flow.length - 1 && (
                 <div className="w-px h-6 bg-[#109e9b]/30 my-1" />
               )}

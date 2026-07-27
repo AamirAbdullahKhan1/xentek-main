@@ -5,7 +5,7 @@ import { Lightbulb, Code2, Package, Sparkles } from 'lucide-react';
 const floatingCards = [
   { label: 'Ideas', Icon: Lightbulb, x: '8%', y: '12%', delay: 0 },
   { label: 'Engineering', Icon: Code2, x: '62%', y: '8%', delay: 0.15 },
-  { label: 'Products', Icon: Package, x: '18%', y: '58%', delay: 0.3 },
+  { label: 'Products', Icon: Package, x: '5%', y: '64%', delay: 0.3 },
   { label: 'Impact', Icon: Sparkles, x: '68%', y: '55%', delay: 0.45 },
 ];
 

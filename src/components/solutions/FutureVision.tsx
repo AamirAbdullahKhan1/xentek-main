@@ -52,14 +52,14 @@ const focuses = [
 
 export const FutureVision = () => {
   return (
-    <section className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[11px] font-bold tracking-[0.2em] uppercase text-[#109e9b] mb-3"
+            className="text-[14px] font-figtree font-bold tracking-[0.2em] uppercase text-[#109e9b] mb-3"
           >
             Where we're headed
           </motion.p>
@@ -67,7 +67,7 @@ export const FutureVision = () => {
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-xentek-dark tracking-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-figtree font-bold text-xentek-dark tracking-normal"
           >
             Future Vision
           </motion.h2>
@@ -82,7 +82,7 @@ export const FutureVision = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               whileHover={{ y: -8 }}
-              className="group relative rounded-2xl border border-gray-100 bg-white p-7 shadow-sm hover:shadow-xl hover:shadow-[#109e9b]/5 hover:border-[#109e9b]/20 transition-all duration-300 overflow-hidden"
+              className="group relative cursor-pointer rounded-2xl border border-gray-100 bg-white p-7 shadow-sm hover:shadow-xl hover:shadow-[#109e9b]/5 hover:border-[#109e9b]/20 transition-all duration-300 overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#109e9b]/[0.04] rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
@@ -90,10 +90,10 @@ export const FutureVision = () => {
                 {item.visual}
               </div>
 
-              <div className="w-10 h-10 rounded-xl bg-[#109e9b]/10 flex items-center justify-center mb-4">
-                <item.Icon className="w-5 h-5 text-[#109e9b]" strokeWidth={1.75} />
+              <div className="w-12 h-12 rounded-xl bg-[#109e9b]/10 flex items-center justify-center mb-4">
+                <item.Icon className="w-6 h-6 text-[#109e9b]" strokeWidth={1.75} />
               </div>
-              <h3 className="text-lg font-bold text-xentek-dark tracking-tight mb-2">
+              <h3 className="text-lg font-bold font-figtree text-xentek-dark tracking-normal mb-2">
                 {item.title}
               </h3>
               <p className="text-sm text-gray-500 font-poppins leading-relaxed">{item.desc}</p>

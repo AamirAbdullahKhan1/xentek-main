@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Check, ImageIcon } from 'lucide-react';
 
 /** Paste your SHE-AI product / phone mockup image URL here */
-const SHE_AI_IMAGE_URL = '';
+const SHE_AI_IMAGE_URL = 'https://live.staticflickr.com/65535/55420979337_ce1c3bff56_z.jpg';
 
 const features = [
   'AI-powered intelligent assistant',
