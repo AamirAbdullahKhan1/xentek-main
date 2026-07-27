@@ -71,14 +71,14 @@ export const Work = () => {
 
               <div className="flex gap-2 mb-3">
                 {project.tags.map(tag => (
-                  <span key={tag} className="px-2.5 py-1 text-xs font-semibold tracking-wider bg-teal-50 text-teal-700 rounded border border-teal-100">
+                  <span key={tag} className="px-2.5 py-1 text-xs font-semibold font-figtree tracking-wider bg-teal-50 text-teal-700 rounded border border-teal-100">
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold font-figtree text-gray-900 mb-2">{project.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed font-figtree">
                 {project.description}
               </p>
             </motion.div>

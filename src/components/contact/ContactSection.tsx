@@ -123,6 +123,7 @@ export const ContactSection = () => {
   });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const setField = (key: keyof typeof form) => (v: string) =>
     setForm((prev) => ({ ...prev, [key]: v }));
@@ -130,9 +131,41 @@ export const ContactSection = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setSending(true);
-    await new Promise((r) => setTimeout(r, 1400)); // demo delay
-    setSending(false);
-    setSubmitted(true);
+    setErrorMsg('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'YOUR_ACCESS_KEY_HERE',
+          name: form.name,
+          email: form.email,
+          company: form.company || 'Not provided',
+          projectType: form.projectType,
+          budget: form.budget || 'Not provided',
+          timeline: form.timeline || 'Not provided',
+          message: form.description,
+          subject: `New Project Inquiry from ${form.name}`,
+          from_name: 'XenTek Contact Form',
+        }),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(result.message || 'Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setErrorMsg('Network error. Please try again later.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const containerVariants: Variants = {
@@ -232,10 +265,10 @@ export const ContactSection = () => {
                     value={form.budget}
                     onChange={setField('budget')}
                     options={[
-                      { value: '<5k', label: 'Under $5,000' },
-                      { value: '5k-15k', label: '$5,000 – $15,000' },
-                      { value: '15k-50k', label: '$15,000 – $50,000' },
-                      { value: '50k+', label: '$50,000+' },
+                      { value: '<5k', label: 'Under ₹5,000' },
+                      { value: '5k-15k', label: '₹5,000 - ₹15,000' },
+                      { value: '15k-50k', label: '₹15,000 - ₹50,000' },
+                      { value: '50k+', label: '₹50,000+' },
                       { value: 'unsure', label: 'Not Sure Yet' },
                     ]}
                   />
@@ -269,10 +302,15 @@ export const ContactSection = () => {
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
+                  {errorMsg && (
+                    <div className="mb-4 rounded-xl bg-red-50 p-3 text-center text-sm font-poppins text-red-600 border border-red-100">
+                      {errorMsg}
+                    </div>
+                  )}
                   <button
                     type="submit"
                     disabled={sending}
-                    className="group flex w-full items-center justify-center gap-3 rounded-full bg-xentek-dark px-8 py-4 text-white font-figtree font-semibold text-base tracking-wide shadow-lg shadow-gray-900/15 transition-all duration-300 hover:bg-[#109e9b] hover:shadow-xl hover:shadow-[#109e9b]/25 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="group flex w-full items-center justify-center gap-3 rounded-full bg-xentek-dark px-8 py-4 text-white font-figtree font-semibold text-base cursor-pointer tracking-wide shadow-lg shadow-gray-900/15 transition-all duration-300 hover:bg-[#109e9b] hover:shadow-xl hover:shadow-[#109e9b]/25 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {sending ? (
                       <>

@@ -92,7 +92,7 @@ const HeroIllustration = () => (
           <span className="w-8 h-8 rounded-xl bg-[#109e9b]/10 flex items-center justify-center">
             <card.Icon className="w-4 h-4 text-[#109e9b]" strokeWidth={1.75} />
           </span>
-          <span className="text-xs font-semibold text-xentek-dark tracking-wide pr-1">
+          <span className="text-xs font-figtree font-semibold text-xentek-dark tracking-wide pr-1">
             {card.label}
           </span>
         </motion.div>
@@ -106,11 +106,11 @@ const HeroIllustration = () => (
       transition={{ delay: 0.6, duration: 0.5 }}
       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
     >
-      <div className="w-28 h-28 rounded-3xl bg-white/70 backdrop-blur-xl border border-[#109e9b]/15 shadow-xl shadow-[#109e9b]/10 flex flex-col items-center justify-center">
-        <span className="text-lg font-bold text-xentek-dark tracking-tight">
-          Xen<span className="text-[#109e9b]">Tek</span>
+      <div className="w-28 h-28 rounded-3xl bg-white/70 backdrop-blur-xl  border border-[#109e9b]/15 shadow-xl shadow-[#109e9b]/10 flex flex-col items-center justify-center">
+        <span className="text-lg font-bold text-xentek-dark tracking-normal font-figtree">
+          Xen<span className="text-[#109e9b] font-figtree">Tek</span>
         </span>
-        <span className="text-[10px] text-gray-400 mt-1 tracking-wider uppercase">
+        <span className="text-[10px] text-gray-600 mt-1 tracking-wider uppercase font-figtree">
           Ecosystem
         </span>
       </div>

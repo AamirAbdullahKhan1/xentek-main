@@ -203,8 +203,8 @@ const StepCard = ({
           </motion.div>
         </div>
 
-        <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">{item.title}</h3>
-        <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+        <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight font-figtree">{item.title}</h3>
+        <p className="text-sm text-gray-500 leading-relaxed font-figtree">{item.desc}</p>
 
         {/* Bottom accent bar */}
         <motion.div
@@ -318,8 +318,8 @@ export const Process = () => {
                   <div className={`w-12 h-12 ${bg} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm border ${border}`}>
                     <Icon className={`w-6 h-6 ${color}`} />
                   </div>
-                  <h4 className="font-bold text-gray-900 mb-2">{title}</h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+                  <h4 className="font-bold font-figtree text-gray-900 mb-2">{title}</h4>
+                  <p className="text-gray-500 text-sm leading-relaxed font-figtree">{desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -334,10 +334,10 @@ export const Process = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <h2 className="text-3xl md:text-5xl font-poppins font-semibold text-xentek-dark mb-4">
+            <h2 className="text-3xl md:text-5xl font-poppins font-semibold font-figtree text-xentek-dark mb-4">
               Our Technical Process
             </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-500 max-w-2xl mx-auto text-lg font-figtree">
               A systematic, transparent approach from concept to deployment, engineered for excellence.
             </p>
           </motion.div>

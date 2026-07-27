@@ -16,7 +16,7 @@ const faqs = [
   {
     question: 'What is the typical project duration?',
     answer:
-      'Marketing sites often ship in 2–6 weeks. Product MVPs typically take 8–14 weeks. Enterprise systems vary — we set milestones so value lands early.',
+      'Marketing sites often ship in 2-6 weeks. Product MVPs typically take 8-14 weeks. Enterprise systems vary — we set milestones so value lands early.',
   },
   {
     question: 'Do you provide maintenance?',
@@ -57,7 +57,7 @@ export const Faq = () => {
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus:outline-none"
+                  className="w-full px-6 py-5 flex items-center cursor-pointer justify-between gap-4 text-left focus:outline-none"
                 >
                   <span className="font-semibold text-xentek-dark font-poppins">{faq.question}</span>
                   <motion.span
