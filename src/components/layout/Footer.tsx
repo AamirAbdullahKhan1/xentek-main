@@ -12,7 +12,7 @@ export const Footer = () => {
             <Link to="/" className="inline-block mb-4">
               <span className="text-2xl font-bold text-xentek-dark tracking-tight">Xen<span className="text-xentek-accent">Tek</span>.</span>
             </Link>
-            <p className="text-sm text-gray-500 mb-6 max-w-xs">
+            <p className="text-[15px] font-figtree text-gray-500 mb-6 max-w-xs">
               Engineering the future with technical precision and design excellence.
             </p>
             <div className="flex space-x-4">
@@ -26,37 +26,37 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-6 text-sm uppercase tracking-wider">Explore</h4>
+            <h4 className="font-semibold font-figtree text-gray-900 mb-6 text-[14px] uppercase tracking-wider">Explore</h4>
             <ul className="space-y-4">
-              <li><Link to="/about" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">About Our Story</Link></li>
-              <li><Link to="/services" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Service Offerings</Link></li>
-              <li><Link to="/solutions" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Digital Solutions</Link></li>
+              {/* <li><Link to="/about" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">About Our Story</Link></li> */}
+              <li><Link to="/services" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Service Offerings</Link></li>
+              <li><Link to="/solutions" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Digital Solutions</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-6 text-sm uppercase tracking-wider">Company</h4>
+            <h4 className="font-semibold font-figtree text-gray-900 mb-6 text-[14px] uppercase tracking-wider">Company</h4>
             <ul className="space-y-4">
-              <li><Link to="/about" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">About Us</Link></li>
-              <li><Link to="/portfolio" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Our Portfolio</Link></li>
-              <li><Link to="/careers" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Careers</Link></li>
-              <li><Link to="/contact" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Contact</Link></li>
+              {/* <li><Link to="/about" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">About Us</Link></li> */}
+              {/*<li><Link to="/portfolio" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Our Portfolio</Link></li>*/}
+               <li><Link to="/careers" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Careers</Link></li>
+              <li><Link to="/contact" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-6 text-sm uppercase tracking-wider">Legal</h4>
+            <h4 className="font-semibold font-figtree text-gray-900 mb-6 text-[14px] uppercase tracking-wider">Legal</h4>
             <ul className="space-y-4">
-              <li><Link to="/privacy" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Terms of Service</Link></li>
-              <li><Link to="/cookies" className="text-sm text-gray-500 hover:text-xentek-accent transition-colors">Cookie Policy</Link></li>
+              <li><Link to="/privacy" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookies" className="text-[15px] font-figtree text-gray-500 hover:text-xentek-accent transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
 
         </div>
 
         <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-xs text-gray-400 mb-4 md:mb-0">
+          <p className="text-[12px] font-figtree text-gray-400 mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} XenTek. All rights reserved.
           </p>
         </div>

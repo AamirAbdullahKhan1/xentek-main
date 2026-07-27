@@ -29,13 +29,13 @@ export const Cta = () => {
         >
           <Link
             to="/contact"
-            className="bg-xentek-dark text-white px-10 py-4 rounded-full font-medium hover:bg-xentek-accent transition-all duration-300 shadow-xl shadow-xentek-dark/10"
+            className="bg-xentek-dark font-figtree text-white px-10 py-4 rounded-full font-medium hover:bg-xentek-accent transition-all duration-300 shadow-xl shadow-xentek-dark/10"
           >
             Start a Project
           </Link>
           <Link
             to="/contact"
-            className="bg-white text-xentek-dark border border-gray-200 px-10 py-4 rounded-full font-medium hover:border-xentek-dark transition-all duration-300"
+            className="bg-white text-xentek-dark font-figtree border border-gray-200 px-10 py-4 rounded-full font-medium hover:border-xentek-dark transition-all duration-300"
           >
             Contact Us
           </Link>
