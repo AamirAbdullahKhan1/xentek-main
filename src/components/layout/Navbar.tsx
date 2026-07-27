@@ -163,9 +163,9 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="flex items-center gap-3 cursor-pointer" onClick={closeMenu}>
-                <img src={logo} alt="XenTek Logo" className="h-12 w-auto" />
-                <span className="text-[28px] font-semibold font-figtree text-xentek-dark tracking-wide">
+              <Link to="/" className="flex items-center gap-2 cursor-pointer" onClick={closeMenu}>
+                <img src={logo} alt="XenTek Logo" className=" h-9 md:h-12 md:w-12 w-9" />
+                <span className="text-[19px] md:text-[28px] font-semibold font-figtree text-xentek-dark tracking-wide">
                   Xen<span className="text-xentek-accent font-figtree tracking-wide">Tek</span>
                 </span>
               </Link>
