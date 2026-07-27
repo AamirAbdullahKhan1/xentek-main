@@ -360,12 +360,6 @@ export const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.48, duration: 0.45 }}
                 >
-                  <p className="mb-1 text-[10px] font-figtree font-bold tracking-[0.18em] uppercase text-gray-500">
-                    XenTek Motto
-                  </p>
-                  <p className="mb-5 max-w-[260px] text-sm leading-relaxed text-gray-500 font-poppins">
-                    Delivering Digital Mastery — your vision, our expertise.
-                  </p>
                   <Link
                     to="/contact"
                     onClick={closeMenu}
