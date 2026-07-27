@@ -99,9 +99,9 @@ export const BottomCta = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full border border-[#109e9b]/30 bg-[#109e9b]/15 px-4 py-1.5 text-xs font-bold font-figtree tracking-[0.16em] uppercase text-[#109e9b] mb-8"
+          className="inline-flex items-center gap-2 rounded-full border border-[#109e9b]/30 bg-[#109e9b]/15 px-4 py-2 text-xs font-bold font-figtree tracking-[0.16em] uppercase text-[#ffff] mb-8"
         >
-          <Sparkles className="h-3.5 w-3.5" strokeWidth={2} />
+          <Sparkles className="h-4 w-4" strokeWidth={2} />
           Ready to Start?
         </motion.div>
 
