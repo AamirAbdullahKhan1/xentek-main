@@ -41,19 +41,11 @@ const HeroIllustration = () => (
         animate={{ pathLength: 1 }}
         transition={{ duration: 2.2, delay: 0.2, ease: 'easeInOut' }}
       />
-      <motion.path
-        d="M100 90 C130 140, 150 180, 120 220"
-        stroke="#109e9b"
-        strokeWidth="1"
-        strokeOpacity="0.2"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1.8, delay: 0.35 }}
-      />
+      
       {[
         [80, 70],
         [310, 70],
-        [120, 220],
+        [90, 200],
         [320, 200],
         [200, 140],
       ].map(([cx, cy], i) => (
@@ -106,7 +98,7 @@ const HeroIllustration = () => (
       transition={{ delay: 0.6, duration: 0.5 }}
       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
     >
-      <div className="w-28 h-28 rounded-3xl bg-white/70 backdrop-blur-xl  border border-[#109e9b]/15 shadow-xl shadow-[#109e9b]/10 flex flex-col items-center justify-center">
+      <div className="w-28 h-22 rounded-3xl bg-white/70 backdrop-blur-xl  border border-[#109e9b]/15 shadow-xl shadow-[#109e9b]/10 flex flex-col items-center justify-center">
         <span className="text-lg font-bold text-xentek-dark tracking-normal font-figtree">
           Xen<span className="text-[#109e9b] font-figtree">Tek</span>
         </span>
