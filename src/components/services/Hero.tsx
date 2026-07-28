@@ -33,10 +33,10 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.08 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-xentek-dark leading-[1.08] tracking-tight mb-8 max-w-4xl"
+          className="text-5xl md:text-6xl lg:text-7xl block font-bold text-xentek-dark leading-[1.08] tracking-tight mb-8 max-w-4xl"
         >
           We don't just build.{' '}
-          <span className="italic text-xentek-accent font-serif">We engineer.</span>
+          <span className="italic text-xentek-accent font-serif block">We engineer.</span>
         </motion.h1>
 
         {/* Sub-copy */}
@@ -60,7 +60,7 @@ export const Hero = () => {
           {[
             { value: '100%', label: 'Custom Built' },
             { value: '24h', label: 'Avg. Response Time' },
-            { value: '10+', label: 'Active Projects' },
+            { value: '7+', label: 'Active Projects' },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="text-3xl font-bold font-figtree text-xentek-dark tracking-tight mb-1">{stat.value}</div>

@@ -47,7 +47,7 @@ export const Hero = () => {
             >
               Let's Build Something{' '}
               <span
-                className="relative"
+                className="relative italic font-serif"
                 style={{ color: '#109e9b' }}
               >
                 Together.

@@ -52,7 +52,7 @@ export const Hero = () => {
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-xentek-dark leading-[1.1] tracking-tight mb-5"
         >
           Transparent Pricing.{' '}
-          <span className="italic text-xentek-accent font-serif">Tailored Engineering.</span>
+          <span className="italic text-xentek-accent block font-serif">Tailored Engineering.</span>
         </motion.h1>
 
         <motion.p
