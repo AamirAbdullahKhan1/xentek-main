@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { Monitor, Smartphone, Workflow, Bot, Check, ArrowUpRight } from 'lucide-react';
+import { Monitor, Smartphone, Workflow, Bot, ShieldCheck, ShieldAlert, Check, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-type Accent = 'teal' | 'cyan' | 'emerald';
+type Accent = 'teal' | 'cyan' | 'emerald' | 'rose' | 'amber';
 
 const modules: {
   icon: typeof Monitor;
@@ -61,24 +61,81 @@ const modules: {
   },
 ];
 
+const securityModules: {
+  icon: typeof Monitor;
+  title: string;
+  desc: string;
+  features: string[];
+  price: string;
+  cta: string;
+  span: string;
+  accent: Accent;
+  featured: boolean;
+  disclaimer?: string;
+}[] = [
+  {
+    icon: ShieldCheck,
+    title: 'Software Composition Analysis',
+    desc: 'Identify vulnerable open-source dependencies and third-party packages with structured SCA scanning and actionable remediation recommendations.',
+    features: ['Dependency vulnerability scanning', 'CVE analysis & severity mapping', 'Remediation recommendations'],
+    price: 'Custom',
+    cta: 'Request Assessment',
+    span: 'md:col-span-6',
+    accent: 'rose',
+    featured: false,
+  },
+  {
+    icon: ShieldAlert,
+    title: 'Web Application Security Assessment',
+    desc: 'Structured security testing of your web applications covering authentication, APIs, input validation, and server configuration within an agreed scope.',
+    features: ['Auth & session security review', 'API security assessment', 'Security configuration review'],
+    price: 'Custom',
+    cta: 'Request Assessment',
+    span: 'md:col-span-6',
+    accent: 'amber',
+    featured: false,
+    disclaimer: 'Conducted with explicit authorization within an agreed testing scope.',
+  },
+];
+
 const accentMap: Record<
   Accent,
-  { iconBg: string; iconColor: string; btn: string }
+  { iconBg: string; iconColor: string; btn: string; checkBg: string; checkColor: string }
 > = {
   teal: {
     iconBg: 'bg-teal-50',
     iconColor: 'text-teal-600',
     btn: 'bg-xentek-dark hover:bg-xentek-accent',
+    checkBg: 'bg-teal-50',
+    checkColor: 'text-teal-600',
   },
   cyan: {
     iconBg: 'bg-cyan-50',
     iconColor: 'text-cyan-600',
     btn: 'bg-xentek-dark hover:bg-xentek-accent',
+    checkBg: 'bg-teal-50',
+    checkColor: 'text-teal-600',
   },
   emerald: {
     iconBg: 'bg-emerald-50',
     iconColor: 'text-emerald-600',
     btn: 'bg-xentek-dark hover:bg-xentek-accent',
+    checkBg: 'bg-teal-50',
+    checkColor: 'text-teal-600',
+  },
+  rose: {
+    iconBg: 'bg-rose-50',
+    iconColor: 'text-rose-600',
+    btn: 'bg-xentek-dark hover:bg-xentek-accent',
+    checkBg: 'bg-rose-50',
+    checkColor: 'text-rose-600',
+  },
+  amber: {
+    iconBg: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    btn: 'bg-xentek-dark hover:bg-xentek-accent',
+    checkBg: 'bg-amber-50',
+    checkColor: 'text-amber-600',
   },
 };
 
@@ -117,7 +174,7 @@ export const ServiceModules = () => {
           </motion.p>
         </div>
 
-        {/* Bento: 12-col — featured is wider, never taller */}
+        {/* Core modules bento */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
           {modules.map((mod, index) => {
             const Icon = mod.icon;
@@ -203,6 +260,96 @@ export const ServiceModules = () => {
             );
           })}
         </div>
+
+        {/* Security Solutions separator */}
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-12 mb-8 flex items-center gap-5"
+        >
+          <div className="h-px flex-1 bg-gray-100" />
+          <div className="flex items-center gap-2.5 bg-xentek-dark text-white px-4 py-2 rounded-full shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 text-xentek-accent">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <span className="text-[11px] font-bold tracking-[0.2em] uppercase">Security Solutions</span>
+          </div>
+          <div className="h-px flex-1 bg-gray-100" />
+        </motion.div>
+
+        {/* Security modules bento */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5">
+          {securityModules.map((mod, index) => {
+            const Icon = mod.icon;
+            const colors = accentMap[mod.accent];
+            return (
+              <motion.div
+                key={mod.title}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-30px' }}
+                transition={{ duration: 0.55, delay: index * 0.08 }}
+                whileHover={{ y: -4 }}
+                className={`group relative ${mod.span}`}
+              >
+                <div className="relative h-full flex flex-col rounded-2xl border bg-white border-gray-100 hover:border-gray-200 p-6 md:p-7 overflow-hidden transition-all duration-300 shadow-sm group-hover:shadow-xl group-hover:shadow-gray-900/5">
+                  <div className="flex items-start justify-between mb-4">
+                    <div
+                      className={`w-11 h-11 rounded-xl ${colors.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <Icon className={`w-5 h-5 ${colors.iconColor}`} strokeWidth={1.75} />
+                    </div>
+                  </div>
+
+                  <h3 className="text-lg md:text-xl font-bold text-xentek-dark tracking-tight mb-2">
+                    {mod.title}
+                  </h3>
+                  <p className="text-sm text-gray-500 font-poppins leading-relaxed mb-4">
+                    {mod.desc}
+                  </p>
+
+                  <ul className="space-y-2 mb-5">
+                    {mod.features.map((f) => (
+                      <li
+                        key={f}
+                        className="flex items-center gap-2 text-sm text-gray-600 font-poppins"
+                      >
+                        <span className={`w-5 h-5 rounded-full ${colors.checkBg} flex items-center justify-center shrink-0`}>
+                          <Check className={`w-3 h-3 ${colors.checkColor}`} strokeWidth={2.5} />
+                        </span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="mt-auto flex flex-col gap-3 pt-4 border-t border-gray-100">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div>
+                        <p className="text-[13px] uppercase tracking-wider text-gray-500 font-figtree font-medium mb-0.5">
+                          Pricing
+                        </p>
+                        <p className="text-xl font-bold text-xentek-dark font-figtree">{mod.price}</p>
+                      </div>
+                      <Link
+                        to="/contact"
+                        className={`inline-flex items-center gap-1.5 text-white text-sm font-figtree font-medium px-5 py-2.5 rounded-full transition-all duration-300 ${colors.btn}`}
+                      >
+                        {mod.cta}
+                        <ArrowUpRight className="w-3.5 h-3.5 opacity-80 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </Link>
+                    </div>
+                    {mod.disclaimer && (
+                      <p className="text-[11px] text-gray-400 font-poppins italic">{mod.disclaimer}</p>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
       </div>
     </section>
   );
