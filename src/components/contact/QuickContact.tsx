@@ -22,7 +22,7 @@ const quickCards = [
   {
     icon: <Mail className="h-5 w-5" strokeWidth={1.8} />,
     title: 'Email Us',
-    primary: 'hello@xentek.in',
+    primary: 'aamir@xentek.in',
     sub: 'For all project inquiries',
     href: 'mailto:officialxentek@gmail.com',
     color: '#109e9b',
